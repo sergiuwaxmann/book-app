@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bookapp/constant.dart';
 import 'package:bookapp/widgets/rounded_button.dart';
+import 'package:bookapp/screens/home.dart';
 
 void main() => runApp(BookApp());
 
@@ -56,6 +57,14 @@ class WelcomeScreen extends StatelessWidget {
               width: MediaQuery.of(context).size.width * .6,
               child: RoundedButton(
                 text: 'start reading',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return HomeScreen();
+                    }),
+                  );
+                },
                 fontSize: 20,
               ),
             ),
